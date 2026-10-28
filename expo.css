@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: #ffc107;
+  color: #111827;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-sm {
+  padding: 6px 16px;
+  font-size: 0.85rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+}
+
+.header {
+  background-color: #333f50;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 5%;
+}
+
+.logo {
+  font-size: 1.2rem;
+}
+
+.logo strong {
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.hero {
+  background-color: #333f50;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 5%;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  color: #9ca3af;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.proyectos {
+  padding: 60px 5%;
+}
+
+.proyectos h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 12px 0 8px 0;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.tag-web {
+  background: #fef3c7;
+  color: #d97706;
+}
+.tag-movil {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.tag-iot {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+.tag-datos {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.galeria {
+  padding: 0 5% 60px 5%;
+}
+
+.galeria h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 16px;
+}
+
+.img-box {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.span-col-2 {
+  grid-column: span 2;
+}
+.span-row-2 {
+  grid-row: span 2;
+}
+
+.footer {
+  background-color: #333f50;
+  color: #9ca3af;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  font-size: 0.85rem;
+}
+
+.social-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+@media (max-width: 1024px) {
+  .grid-proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .span-col-2 {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .hero {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-actions {
+    flex-direction: column;
+  }
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+  .grid-galeria {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 140px;
+    gap: 8px;
+  }
+  .img-box {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+  .grid-galeria .img-box:first-child {
+    grid-column: span 2 !important;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
